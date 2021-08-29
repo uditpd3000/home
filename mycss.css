@@ -7,6 +7,7 @@ body{
 .image1{
     margin-top: 50px;
     height: 120vh;
+    max-width: 100%;
     text-align: right;
 }
 .imagecontainer{
@@ -21,6 +22,9 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(159, 103, 214);
     font-size: 80px;
+}
+.mynavbar{
+    max-width: 100%;
 }
 .uditpd3000{
     font-size: 25px;
@@ -51,6 +55,7 @@ body{
 
 .profile{
     height: 80vh; 
+    max-width: 100%;
 }
 .aboutcontent{
     margin-top: 0%;
@@ -157,6 +162,7 @@ a:hover{
    font-size: 70px;
 }
 .randomimage{
+    max-width: 100%;
     height: 100vh;
     margin-top: -5%;
 }
@@ -187,3 +193,6 @@ li{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
+[class*="col-"] {
+    width: 100%;
+  }

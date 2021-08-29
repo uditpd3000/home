@@ -23,7 +23,7 @@
     <link href="./mycss.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
 
 
     <!-- jquery -->
@@ -33,7 +33,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <div class="mynavbar">
+    <div class="mynavbar col-sm-12">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark py-3">
       <a class="navbar-brand" href="#home" style="padding-left: 2.5%;">
         <img class="rounded-circle " src="images/Profile_Pic.png" alt="Udit" height="40" width="35">
@@ -68,14 +68,14 @@
     <!-- home/header -->
     <header id="home">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-sm-12">
           <div class="header-text">
            Hello!<br>
           <h1 class="myheader">I am Udit, CSE sophomore from one of the India's Prestigious Universities, IIT Kanpur. </h1>
           </div>
 
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-sm-12">
           <div class="imagecontainer">
             <img src="images/background.png" class="image1">
           </div>
@@ -90,12 +90,12 @@
           <div class="container" style="text-align: right;  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 60px;">
             About Me
           </div>
-          <div class="col-lg-6">
-            <div style="text-align: left;">
+          <div class="col-lg-6 col-sm-12">
+            <div style="text-align: center;">
               <img src="images/Profile1.png" class="profile">
             </div>
           </div>
-          <div class="col-lg-6 aboutcontent">
+          <div class="col-lg-6 col-sm-12 aboutcontent">
             <p>
               <div style=" font-weight: bolder;">Introducing myself always have been confusing but yaa... </div><br>
               Here is a coding enthusiast who is just in <span style="color: rgb(158, 68, 65);">love</span> with his laptop and is always vibing with his <span style="color: rgb(158, 68, 65);">partner</span> or you can say headphone.<br>
@@ -108,22 +108,26 @@
       </div>
     </div>
     </div>
-    <div class="container" id="projects">
-      <div class="row">
+          
+    <div class="container" id="projects"> <!-- Projects Container -->
+      <!-- <div class="row"> -->
         <!-- <div class="col-lg-6"> -->
-          <div class="projects">Projects</div>
-          <div class="swiper-container mySwiper">
+          <div class="projects col-sm-12">Projects</div>
+          <div class="swiper mySwiper">
+            
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
-                <div class="card" style="background-color: rgba(153, 149, 149, 0.589);">
+                
+                <div class="card h-100" style="background-color: rgba(153, 149, 149, 0.589);">
                   <div class="card-header" style="background-color: rgb(235, 232, 232);">
                     <h2 class="mycardheader">SPO Web App</h1>
                   </div>
+                  
                   <div class="row">
-                    <div class="col-lg-6">
-                      <div class="card-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                      <!-- <div class="card-body"> -->
                         <p class="project-description">
                           <span style="color: rgba(102, 39, 39, 0.822);"> Offered by Programming Club under SnT Projects.</span><br>
                           This project was just awesome where me along with my groupmates made a web portal for Student Placement Office, IITK to
@@ -131,13 +135,14 @@
                            We used React.js and Django for this.
                         </p>
                         <a href="https://github.com/SPO-Career-Portal" target="_blank"class="fa fa-github fa-3x"></a>
-                      </div>
+                      <!-- </div> --> 
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                       <div class="card-img">
                         <img src="images/projects.png" class="image2">
                       </div>
                     </div>
+                    
                   </div>
                 </div>
               </div>
@@ -196,16 +201,16 @@
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar" style="color: seagreen;"></div>
           </div>
-      </div>
+        <!-- </div>  -->
     </div>
     <div class="random1">
       <div class="row">
-        <div class="col-lg-6">
-          <div style="text-align: left;">
+        <div class="col-lg-6 col-sm-12">
+          <div style="text-align: center;">
             <img src="images/heartonmobile.png" class="randomimage">
           </div>
         </div>
-        <div class="col-lg-6 random2" >
+        <div class="col-lg-6 random2 col-sm-12 text-center" >
           In love with
           <div id="random"></div>
           and trying to love
@@ -222,7 +227,7 @@
           Contact Me
         </div>
         <div class="col-lg-6" >
-          <div style="text-align: left;">
+          <div style="text-align: center;">
             <img src="images/contactme.png" class="profile">
           </div>
         </div>
@@ -251,80 +256,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
 
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-
-      
-    </script>
-    <script>
-      var app = document.getElementById('random');
-
-        var typewriter = new Typewriter(app, {
-          loop: true
-        });
-
-        typewriter.
-           typeString('I')
-          .pauseFor(500)
-          .deleteAll()
-          .typeString('Me')
-          .pauseFor(500)
-          .deleteAll()
-          .typeString('Myself')
-          .pauseFor(600)
-          .deleteAll()
-          .pauseFor(4000)
-          .start();
-          
-      
-        
-      
-      
-    </script>
-    <script>
-      
-      var app = document.getElementById('randomagain');
-
-var typewriter = new Typewriter(app, {
-  loop: true
-});
-
-typewriter.pauseFor(5000)
-.typeString('E')
-  .pauseFor(100)
-  .typeString('v')
-  .pauseFor(100)
-  .typeString('e')
-  .pauseFor(100)
-  .typeString('r')
-  .pauseFor(100)
-  .typeString('y')
-  .pauseFor(100)
-  .typeString('t')
-  .pauseFor(100)
-  .typeString('h')
-  .pauseFor(100)
-  .typeString('i')
-  .pauseFor(100)
-  .typeString('n')
-  .pauseFor(100)
-  .typeString('g')
-  .deleteAll()
-  .start()
-
-
-    </script>
+    
   </body>
 </html>
+
